@@ -7,6 +7,18 @@ let products = [
     {name: 'Bike', price: 120, type: 'others', image: 'https://cdn.pixabay.com/photo/2013/07/13/13/43/racing-bicycle-161449_960_720.png'},
     {name: 'Laptop', price: 1200, type: 'electronics', image:'https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_960_720.jpg'},
     {name: 'Cellphone', price: 500, type: 'electronics', image:'https://cdn.pixabay.com/photo/2017/04/26/16/06/mobile-2262928_960_720.jpg'},
+    {name: 'T-shirt', price: 20, type: 'Clothes', image:'https://cdn.pixabay.com/photo/2020/06/05/15/21/yellow-5263498_960_720.jpg'},
+    {name: 'Bike', price: 120, type: 'others', image: 'https://cdn.pixabay.com/photo/2013/07/13/13/43/racing-bicycle-161449_960_720.png'},
+    {name: 'Laptop', price: 1200, type: 'electronics', image:'https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_960_720.jpg'},
+    {name: 'Cellphone', price: 500, type: 'electronics', image:'https://cdn.pixabay.com/photo/2017/04/26/16/06/mobile-2262928_960_720.jpg'},
+    {name: 'T-shirt', price: 20, type: 'Clothes', image:'https://cdn.pixabay.com/photo/2020/06/05/15/21/yellow-5263498_960_720.jpg'},
+    {name: 'Bike', price: 120, type: 'others', image: 'https://cdn.pixabay.com/photo/2013/07/13/13/43/racing-bicycle-161449_960_720.png'},
+    {name: 'Laptop', price: 1200, type: 'electronics', image:'https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_960_720.jpg'},
+    {name: 'Cellphone', price: 500, type: 'electronics', image:'https://cdn.pixabay.com/photo/2017/04/26/16/06/mobile-2262928_960_720.jpg'},
+    {name: 'T-shirt', price: 20, type: 'Clothes', image:'https://cdn.pixabay.com/photo/2020/06/05/15/21/yellow-5263498_960_720.jpg'},
+    {name: 'Bike', price: 120, type: 'others', image: 'https://cdn.pixabay.com/photo/2013/07/13/13/43/racing-bicycle-161449_960_720.png'},
+    {name: 'Laptop', price: 1200, type: 'electronics', image:'https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_960_720.jpg'},
+    {name: 'Cellphone', price: 500, type: 'electronics', image:'https://cdn.pixabay.com/photo/2017/04/26/16/06/mobile-2262928_960_720.jpg'},
     {name: 'T-shirt', price: 20, type: 'Clothes', image:'https://cdn.pixabay.com/photo/2020/06/05/15/21/yellow-5263498_960_720.jpg'}
     ];
 
@@ -32,6 +44,8 @@ function createProductCard(product) {
     let productCard = document.createElement('div');
     let productImage = document.createElement('img');
     let productInfo = document.createElement('div');
+    let figureChart = document.createElement('figure');
+    let addToChart = document.createElement('img');
     let div = document.createElement('div');
     let p1 = document.createElement('p');
     let p2 = document.createElement('p');
@@ -48,6 +62,13 @@ function createProductCard(product) {
     p1.innerHTML = `$${product.price}`;
     div.appendChild(p2);
     p2.innerHTML = product.name;
+    productInfo.appendChild(figureChart);
+    figureChart.appendChild(addToChart);
+    figureChart.classList.add('add-to-chart-btn')
+    addToChart.src = "./icons/bt_add_to_cart.svg";
+    addToChart.setAttribute('alt',`añadir a carrito de compras`);
+    
+
     
 }
 
